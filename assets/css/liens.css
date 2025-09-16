@@ -1,0 +1,21 @@
+/* Styles spécifiques à la page liens */
+article {
+    background: #fff6e3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(235,77,109,0.08);
+    padding: 1em;
+    margin-bottom: 1.5em;
+}
+ul {
+    padding-left: 1.5em;
+}
+article h2 {
+    color: #f0932b;
+}
+
+@media (max-width: 600px) {
+    article {
+        padding: 0.7em;
+        font-size: 1em;
+    }
+}

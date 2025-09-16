@@ -1,0 +1,39 @@
+/* Styles spécifiques à la galerie vidéos */
+.videos {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+.videos figure {
+    background: #fff6e3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(235,77,109,0.08);
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+.videos figcaption {
+    color: #eb4d6d;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+.videos iframe, .videos video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 600px) {
+    .videos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+    .videos figure {
+        max-width: 400px;
+    }
+}

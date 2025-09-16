@@ -1,0 +1,30 @@
+/* Styles spécifiques à la page d'accueil */
+.hero {
+    text-align: center;
+    padding: 2em 0 1em 0;
+}
+.logo {
+    width: 120px;
+    margin-bottom: 1em;
+}
+.highlight {
+    color: #eb4d6d;
+    font-weight: bold;
+}
+.intro {
+    font-size: 1.2em;
+    color: #f0932b;
+    margin-bottom: 2em;
+}
+.actus-list {
+    justify-content: center;
+}
+.actu-card {
+    border: 2px solid #f0932b;
+    background: #fff6e3;
+    transition: box-shadow 0.2s;
+}
+.actu-card:hover {
+    box-shadow: 0 4px 16px rgba(235,77,109,0.15);
+    border-color: #eb4d6d;
+}
