@@ -31,9 +31,28 @@ article h2 {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.card-liquid::before {
+    content: "";
+    position: absolute;
+    left: -40%;
+    top: 70%;
+    width: 180%;
+    height: 60%;
+    background: radial-gradient(circle at 50% 50%, #fff6e3 0%, transparent 70%);
+    opacity: 0.18;
+    transform: scale(1) skewY(-8deg);
+    transition: opacity 0.3s, top 0.3s;
+    z-index: 0;
+}
+
 .card-liquid:hover {
     transform: translateY(-6px) scale(1.04);
     box-shadow: 0 8px 24px rgba(235,77,109,0.18);
+}
+
+.card-liquid:hover::before {
+    opacity: 0.35;
+    top: 60%;
 }
 
 .card-liquid img {
