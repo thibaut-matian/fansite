@@ -42,10 +42,11 @@
 
 /* Styles spécifiques à la galerie colorspread */
 .gallery-colorspread {
+    max-width: 1400px;
+    margin: 2em auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5em;
-    margin: 2em 0;
 }
 
 .gallery-colorspread figure {
@@ -64,22 +65,20 @@
 
 .gallery-colorspread img {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: auto;
+    max-height: 600px;    /* Augmente la taille maximale des colorspread */
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 0.5em;
     background: #fff;
 }
 
-.gallery-colorspread figcaption {
-    color: #f0932b;
-    font-weight: bold;
-    font-size: 1em;
-}
-
 @media (max-width: 900px) {
     .gallery-colorspread {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-colorspread img {
+        max-height: 320px; /* Taille intermédiaire sur tablette */
     }
 }
 @media (max-width: 600px) {
@@ -87,6 +86,6 @@
         grid-template-columns: 1fr;
     }
     .gallery-colorspread img {
-        height: 120px;
+        max-height: 180px; /* Taille réduite sur mobile */
     }
 }
