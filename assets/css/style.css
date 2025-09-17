@@ -24,12 +24,11 @@ nav ul {
     gap: 1em;
     padding: 0.5em 0.2em;
     margin: 0;
-    background: linear-gradient(90deg, #1220e4 0%, #f0932b 40%, #f0932b 100%);
     border-radius: 30px;
     box-shadow: 0 2px 8px rgba(235,77,109,0.10);
 }
 
-/* Menu burger mobile only */
+
 .burger {
     display: none;
     width: 40px;
@@ -209,4 +208,17 @@ footer p {
         max-width: 500px;
         width: 40%;
     }
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em 2em;
+}
+
+.navbar-logo {
+    height: 48px;
+    width: auto;
+    margin-right: 1em;
 }
