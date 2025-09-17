@@ -83,6 +83,55 @@ article h2 {
     margin: 0.3em 0;
 }
 
+.arcs-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1em;
+    margin: 1.5em 0;
+}
+
+.arc-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(235,77,109,0.08);
+    padding: 1em;
+    text-align: center;
+    border: 2px solid #f0932b;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arc-card:hover {
+    box-shadow: 0 6px 18px rgba(235,77,109,0.15);
+    border-color: #eb4d6d;
+}
+
+.arc-card .arc-img {
+    width: 100%;
+    max-width: 220px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0.7em;
+    box-shadow: 0 2px 8px rgba(235,77,109,0.08);
+    background: #fff6e3;
+}
+
+.arc-card h3 {
+    margin: 0 0 0.5em 0;
+    color: #f0932b;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.arc-card p {
+    margin: 0;
+    color: #444;
+    font-size: 0.98em;
+}
+
 @media (max-width: 600px) {
     section > article {
         padding: 0.7em;
@@ -94,6 +143,13 @@ article h2 {
     }
     .card-liquid img {
         width: 60px;
+        height: 60px;
+    }
+    .arcs-cards {
+        grid-template-columns: 1fr;
+        gap: 0.7em;
+    }
+    .arc-card .arc-img {
         height: 60px;
     }
 }
