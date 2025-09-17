@@ -13,9 +13,68 @@ article h2 {
     color: #f0932b;
 }
 
+.personnages-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2em;
+    margin: 1.5em 0;
+}
+
+.card-liquid {
+    background: linear-gradient(135deg, #f0932b 60%, #eb4d6d 100%);
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(235,77,109,0.12);
+    padding: 1em 0.5em 0.7em 0.5em;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-liquid:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(235,77,109,0.18);
+}
+
+.card-liquid img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.7em;
+    border: 3px solid #fff6e3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #fff6e3;
+}
+
+.card-liquid h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(235,77,109,0.12);
+}
+
+.card-liquid .desc,
+.card-liquid .localisation,
+.card-liquid .fruit {
+    font-size: 0.95em;
+    color: #fffbe6;
+    margin: 0.3em 0;
+}
+
 @media (max-width: 600px) {
     section > article {
         padding: 0.7em;
         font-size: 1em;
+    }
+    .personnages-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7em;
+    }
+    .card-liquid img {
+        width: 60px;
+        height: 60px;
     }
 }
