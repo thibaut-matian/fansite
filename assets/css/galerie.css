@@ -39,3 +39,54 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* Styles spécifiques à la galerie colorspread */
+.gallery-colorspread {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    margin: 2em 0;
+}
+
+.gallery-colorspread figure {
+    background: #fff6e3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(235,77,109,0.08);
+    padding: 0.7em;
+    text-align: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.gallery-colorspread figure:hover {
+    box-shadow: 0 8px 24px rgba(235,77,109,0.15);
+    transform: translateY(-4px) scale(1.03);
+}
+
+.gallery-colorspread img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    background: #fff;
+}
+
+.gallery-colorspread figcaption {
+    color: #f0932b;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+@media (max-width: 900px) {
+    .gallery-colorspread {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .gallery-colorspread {
+        grid-template-columns: 1fr;
+    }
+    .gallery-colorspread img {
+        height: 120px;
+    }
+}
